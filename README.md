@@ -2,7 +2,7 @@
 
 Explainable machine learning for **PCOS pattern / risk assessment**.
 
-This is a learning and portfolio project. It is **not** a diagnostic tool, medical device, or substitute for clinical care. See `docs/project-scope.md`.
+ It is **not** a diagnostic tool, medical device, or substitute for clinical care. See `docs/project-scope.md`.
 
 ## Current status
 
