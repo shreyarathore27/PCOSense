@@ -1,0 +1,3 @@
+model,accuracy,precision,recall,f1,roc_auc,pr_auc,brier_score,selected
+logistic_regression,0.853,0.778,0.778,0.778,0.885,0.812,0.136,False
+random_forest,0.862,0.8,0.778,0.789,0.889,0.808,0.125,True
