@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#ff3366" flood-opacity="0.35"/>
+    </filter>
+
+    <g id="sparkle">
+      <path d="M0,-12 Q0,0 12,0 Q0,0 0,12 Q0,0 -12,0 Q0,0 0,-12 Z" fill="#ffd700"/>
+    </g>
+  </defs>
+
+  <style>
+    /* Heart pulsating & floating animation */
+    .heart-body {
+      transform-origin: 200px 220px;
+      animation: pulseAndFloat 3s ease-in-out infinite;
+    }
+
+    @keyframes pulseAndFloat {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+      }
+      20% {
+        transform: translateY(-8px) scale(1.06);
+      }
+      35% {
+        transform: translateY(-2px) scale(0.98);
+      }
+      50% {
+        transform: translateY(-10px) scale(1.04);
+      }
+      75% {
+        transform: translateY(-4px) scale(1);
+      }
+    }
+
+    /* Eye Blinking */
+    .eye {
+      transform-origin: center;
+      animation: blink 4s infinite;
+    }
+
+    @keyframes blink {
+      0%, 45%, 55%, 100% {
+        transform: scaleY(1);
+      }
+      50% {
+        transform: scaleY(0.1);
+      }
+    }
+
+    /* Crack closing / mending */
+    .crack-line {
+      stroke-dasharray: 90;
+      stroke-dashoffset: 0;
+      animation: healCrack 6s ease-in-out infinite;
+    }
+
+    @keyframes healCrack {
+      0%, 15% {
+        stroke-dashoffset: 0;
+        opacity: 0.8;
+      }
+      45%, 85% {
+        stroke-dashoffset: 90;
+        opacity: 0;
+      }
+      95%, 100% {
+        stroke-dashoffset: 0;
+        opacity: 0.8;
+      }
+    }
+
+    /* Stitches dissolving */
+    .stitch {
+      animation: dissolveStitch 6s ease-in-out infinite;
+    }
+
+    @keyframes dissolveStitch {
+      0%, 20% {
+        opacity: 0.9;
+        transform: scale(1);
+      }
+      40%, 85% {
+        opacity: 0;
+        transform: scale(0.4);
+      }
+      95%, 100% {
+        opacity: 0.9;
+        transform: scale(1);
+      }
+    }
+
+    /* Healing aura effect */
+    .healing-glow {
+      animation: auraPulse 6s ease-in-out infinite;
+    }
+
+    @keyframes auraPulse {
+      0%, 20% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      40%, 65% {
+        opacity: 0.7;
+        transform: scale(1.15);
+      }
+      80%, 100% {
+        opacity: 0;
+        transform: scale(1);
+      }
+    }
+
+    /* Sparkles bursting during healing */
+    .sparkle-group {
+      animation: sparkleFade 6s ease-in-out infinite;
+    }
+
+    @keyframes sparkleFade {
+      0%, 25% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      40%, 60% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      75%, 100% {
+        opacity: 0;
+        transform: scale(0);
+      }
+    }
+  </style>
+
+  <g class="heart-body">
+    <path class="healing-glow"
+          d="M200,340 C140,290 60,210 60,140 C60,85 105,45 160,45 C185,45 200,60 200,60 C200,60 215,45 240,45 C295,45 340,85 340,140 C340,210 260,290 200,340 Z"
+          fill="none" stroke="#fff0f5" stroke-width="12" filter="url(#soft-glow)"
+          style="transform-origin: 200px 200px;"/>
+
+    <path d="M200,335 C140,285 70,210 70,140 C70,90 110,55 160,55 C185,55 200,70 200,70 C200,70 215,55 240,55 C290,55 330,90 330,140 C330,210 260,285 200,335 Z"
+          fill="#ff4d6d" filter="url(#soft-glow)"/>
+
+    <path d="M110,120 C100,135 95,155 100,175"
+          fill="none" stroke="#ff85a1" stroke-width="6" stroke-linecap="round"/>
+
+    <ellipse cx="140" cy="195" rx="14" ry="8" fill="#ff758f" opacity="0.6"/>
+    <ellipse cx="260" cy="195" rx="14" ry="8" fill="#ff758f" opacity="0.6"/>
+
+    <g class="eye" style="transform-origin: 155px 165px;">
+      <circle cx="155" cy="165" r="12" fill="#222"/>
+      <circle cx="152" cy="161" r="4.5" fill="#fff"/>
+      <circle cx="158" cy="168" r="2" fill="#fff"/>
+    </g>
+
+    <g class="eye" style="transform-origin: 245px 165px;">
+      <circle cx="245" cy="165" r="12" fill="#222"/>
+      <circle cx="242" cy="161" r="4.5" fill="#fff"/>
+      <circle cx="248" cy="168" r="2" fill="#fff"/>
+    </g>
+
+    <path d="M190,192 Q200,204 210,192" fill="none" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+
+    <path class="crack-line"
+          d="M200,80 L192,120 L210,155 L190,190 L208,230 L195,270 L200,320"
+          fill="none" stroke="#7a142c" stroke-width="3" stroke-linecap="round"/>
+
+    <g class="stitch" style="transform-origin: 196px 137px;">
+      <line x1="184" y1="133" x2="208" y2="142" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      <line x1="187" y1="144" x2="205" y2="131" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g class="stitch" style="transform-origin: 200px 210px;">
+      <line x1="188" y1="206" x2="212" y2="214" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      <line x1="190" y1="216" x2="210" y2="204" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g class="stitch" style="transform-origin: 201px 250px;">
+      <line x1="189" y1="246" x2="213" y2="254" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      <line x1="191" y1="256" x2="211" y2="244" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <g class="sparkle-group" style="transform-origin: 200px 180px;">
+      <use href="#sparkle" x="200" y="140" transform="scale(0.8)"/>
+      <use href="#sparkle" x="185" y="220" transform="scale(0.6)"/>
+      <use href="#sparkle" x="220" y="270" transform="scale(0.7)"/>
+      <use href="#sparkle" x="160" y="100" transform="scale(0.5)"/>
+      <use href="#sparkle" x="240" y="110" transform="scale(0.5)"/>
+    </g>
+  </g>
+</svg>
