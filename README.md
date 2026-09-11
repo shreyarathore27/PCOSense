@@ -66,3 +66,18 @@ python scripts\download_kaggle_pcos.py
 
 Kottarathil, P. (2020). Polycystic ovary syndrome (PCOS). Kaggle.  
 https://www.kaggle.com/datasets/prasoonkottarathil/polycystic-ovary-syndrome-pcos
+
+
+## Responsible ML
+
+PCOSense is an educational screening project, not a medical diagnostic tool.
+
+For training data, evaluation results, intended use and limitations, read the [Model Card](docs/model-card.md).
+
+## Application Flow
+
+1. The user completes the React screening form.
+2. React sends the 18 inputs to the FastAPI backend.
+3. FastAPI validates and passes the data to the saved preprocessing and Random Forest pipeline.
+4. The model returns a class and probability.
+5. The UI displays an educational screening result and disclaimer.
