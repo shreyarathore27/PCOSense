@@ -81,3 +81,7 @@ For training data, evaluation results, intended use and limitations, read the [M
 3. FastAPI validates and passes the data to the saved preprocessing and Random Forest pipeline.
 4. The model returns a class and probability.
 5. The UI displays an educational screening result and disclaimer.
+
+## Quick Start
+
+For complete installation, dataset, model-training and application instructions, see the [Local Setup Guide](docs/setup.md).
