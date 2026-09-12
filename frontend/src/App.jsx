@@ -4,6 +4,7 @@ import {
   EXAMPLE_PATIENT,
   FEATURE_CONFIG,
 } from "./featureConfig";
+import FloatingLines from "./components/FloatingLines";
 import "./App.css";
 
 const FORM_SECTIONS = [
@@ -209,7 +210,32 @@ function App() {
   }
 
   return (
-    <main className="app">
+    <>
+      <div
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 0,
+          pointerEvents: "none",
+          overflow: "hidden",
+        }}
+      >
+        <FloatingLines
+          linesGradient={["#E945F5", "#2F4BC0", "#ff2f77"]}
+          animationSpeed={1}
+          interactive
+          bendRadius={5}
+          bendStrength={-0.5}
+          mouseDamping={0.05}
+          parallax
+          parallaxStrength={0.2}
+        />
+      </div>
+
+      <main className="app" style={{ position: "relative", zIndex: 1 }}>
       <header className="hero">
         <span className="eyebrow">
           AI-powered educational screening
@@ -362,6 +388,7 @@ function App() {
         </p>
       </footer>
     </main>
+    </>
   );
 }
 
